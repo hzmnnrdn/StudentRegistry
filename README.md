@@ -44,3 +44,7 @@ React-Native-Paper
 - React-Native Geolocation Github. Retrieved from https://github.com/react-native-community/react-native-geolocation
 - React-Native Camera Github. Retrieved from https://react-native-community.github.io/react-native-camera/docs/rncamera
 - React-Native Camera Tutorial. Retrieved from https://aboutreact.com/react-native-camera/
+- Speech API expo. Retrieved from https://docs.expo.io/versions/latest/sdk/speech/
+- LOcation API expo. Retrieved from https://docs.expo.io/versions/latest/sdk/location/
+- Firebase doucmentation.Retrieved from https://firebase.google.com/
+
