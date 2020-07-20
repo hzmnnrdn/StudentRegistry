@@ -15,12 +15,23 @@ This application is an application that allows students to register their detail
 * To enable student create their own profile by using CRUD element
 * To get the users location
 * To capture and save their details in real-time database
+* Administration Authentication
+* Administration Update and Delete Information
 
 
 ### Feature and Functionality
 The features are authentication where the users can sign up their username and password to log in into the application. Next, the application will use location API to capture from where the user register and camera API for the user did to capture their image to be uploaded as a profile picture.  We will use create, read, update and delete features so that the user can easily update any changes.
 
 ### Screen Navigation
+#### Navigation
+Choose User->user SignUp->user Login->user HomePage->LogOut
+ Choose administration->Login->Administration Page ->LogOut
+#### Components
+StyleSheet, View,Text,Image,TextInput,Button, Alert, TouchableOpacity, 
+#### API
+Camera Api, Navigation Api, Speech Api
+#### UI Tool KIT
+React-Native-Paper
 
 
 ### Sequence Diagram
