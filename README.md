@@ -27,8 +27,8 @@ The features are authentication where the users can sign up their username and p
 
 
 ### References
-Student Registration and Enrollment Managemnet System. Retrieved from https://www.creatrixcampus.com/student-registration-enrollment
-React-Native Geolocation API. Retrieved from https://reactnative.dev/docs/geolocation.html
-React-Native Geolocation Github. Retrieved from https://github.com/react-native-community/react-native-geolocation
-React-Native Camera Github. Retrieved from https://react-native-community.github.io/react-native-camera/docs/rncamera
-React-Native Camera Tutorial. Retrieved from https://aboutreact.com/react-native-camera/
+#### Student Registration and Enrollment Managemnet System. Retrieved from https://www.creatrixcampus.com/student-registration-enrollment
+#### React-Native Geolocation API. Retrieved from https://reactnative.dev/docs/geolocation.html
+#### React-Native Geolocation Github. Retrieved from https://github.com/react-native-community/react-native-geolocation
+#### React-Native Camera Github. Retrieved from https://react-native-community.github.io/react-native-camera/docs/rncamera
+#### React-Native Camera Tutorial. Retrieved from https://aboutreact.com/react-native-camera/
