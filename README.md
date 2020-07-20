@@ -35,7 +35,7 @@ React-Native-Paper
 
 
 ### Sequence Diagram
-![Sequence diagram 1](/Sequence diagram 1.png)
+![Sequence diagram 1](https://github.com/hzmnnrdn/StudentRegistry/blob/master/Sequence%20diagram%201.png)
 
 ### References
 - Student Registration and Enrollment Managemnet System. Retrieved from https://www.creatrixcampus.com/student-registration-enrollment
