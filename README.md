@@ -5,7 +5,7 @@
 ### Mujib Mehran 1632625
 ### Afifi Syahmi Bin Kamal-Ludin 1710129
 
-## Title: Student Registry Application
+## Title: Find My Group
 
 ### Introduction
 Sometimes finding groupmates manually in the class is problematic.  ‘Find my Group-mate’ is an app which gives the best solution for that and it’s a very convenient way to join a group and detect which group has empty slot and which group does not. In this app, there will be two types of user. One is the Group leader and the another type is group members. Group Leaders can generate QR code to join group and once the generated QR-code is scanned by the groupmates, automatically he will added to certain group based on the QR code that he/she scanned. The group members have to signup to create an account using email and password. After completing the signup, the user can change his email and password. In Home page he can see the available slots of the groups and pressing the join button, user will navigate to Scanning the QR-code page and once he scan the QR-code he will be added. The users will also get the notifications about the projects.
@@ -25,28 +25,53 @@ As our proposed mobile application is “Find My Group-partner”. We decided as
 4.	Notification: Sometimes he forgets about our group meeting and when is the submission of the project but a simple reminder can solve this issue. Using ‘Find my Group-partner’, the leader/teacher can send notifications to the users about the time of the project submission or when and where to meet for the group meeting. 
 
 #### Functionality:
-**API** There are many API that can be integrated into our mibile App project. But specifically, we chose contact API, notification API, React Native. Contact API is used for the student to get their contact number directly and saved for the other member references. Contact API ease the group leader or group members to get phone nu,ber of other member because tehir phone number is caught when theyregsiter in the group. Notification API is for the Admin to give toification on the application is case there are meeting or anty important notification. This API is veru useful when the Admin highlight on saomething.
 
-**Error Checking** We use logic in error checking. Sometimes even when changing password or changing email, user might input wrong in either one of it and error chehcking is important to make sure it is corrrect. Erro checking is important as we want our application to be executed as what is supposed to do. So logic need to be handle carefully in order to make sure the application run correctly. This error checking can assure the authentication process to run correctly like to match the email and password.
+**API**
+**expo-contact** we have used expo contacts in our project to collect the user’s contact number from the mobile phone then we stored it to the database. We must save his own number in his mobile phone and this API will detect his contact number and take it while he is registering to the group
 
-**Components** As it is stated that react native component is a basic part in developing any type of mobile app.Also, it is divided in two main parts such container and presentational component.Hence, in our project the basic to include container such for states,props and function for make it work eventually.Here the container role as this application will ease the way for users and exhibition visitors by allowing them to register online and include their personal information , the users can be the participants who are in favour to show their poster on that day. Thus, the application will make the ability to provide an opportunity for researchers to interact and exchange ideas and also to promote international collaborative research and give the opportunity to exhibit research outputs at global level.Furthermore, where visitors will be able to register online,our application will solve common problem that most visitors are far away from the university location and can not register on exhibition time and that not acceptable if lead them to miss that day. However, for the appearance and styling of our mobile app we can include such any type of presentational component like UI toolkit or nativebase.To be clear, for enhancement of our project we will include these components to enable our functionality and objective is working as is planned.
+**react-native-qrcode** The group leader will generate the QRcode and using that QRcode the group members will join the group with their information. To generate the QRcode, we have used react-native-qrcode. When the leader write the group name and press generate, using this API, the QRcode generates using the group name.
 
-**Firebase** Firebase is used for database system. The users details usch as email, password, phone number will be stored in the firebase. This is useful for the authentication preocess. To determine whether the user existing or not. Next, the user is allowed to enroll through the structure in the event that there is spot and, at that point it will be recorded that enlisted successfully.While in the event that it is full,it will show up for the user that it is full and can not be added.Lastly, we can said that the firebase is so valuable as will help us as the information stockpiling which bring about empowering enrollment dependent on the existent spots.
+**expo-notification** We have used expo-notification to send notification to the user. The teacher can send the notification to the user using this. Expo-Notification collects the token from the user’s mobile to send notification and using expo-notification-tool the notification can be sent to the user. 
 
-**Authentication** Authentication is important in any kind of application especially if the application use credentials to log in. So for security reasons, we use and include authentication function in our mobile application. In order to use the application, user need to sign up using their email and password and later they need to log in. This is easier if the student is already have an account. But if the student is new user, then he/she need to register first and their email will be stored in the firebase. If the student already have account, they can sign in and if their date is matching to the firebase, they can log in.
+**expo-Barcode-Scanner** Once the QRcode is generated, Expo-Barcode-Scanner is used to scan that QRcode. IT collects the hashed data from the QRcode and from that data the system understands in which group the user should join. 
 
+**expo-permissions** The system accesses user’s camera and contacts and to get this access we need permission from the user. To get the permission, we have used expo-permissions. What will the App do if the user allows the system to access and what will the App do if the user does not allow the system to access, all of them are handled by expo-permissions. 
+
+
+**Components**
+
+**Presentational components:** Presentational components determine how a App should look. We have used **View** that supports layout with flexbox, style. We have used **Text** to display the text, **Image** to display images, **Button and TouchableOpacity** to interaction between other pages and actions, **TextInput** to take the input of the text from the user, **ActivityIndicator** to show a circular loading indicator and the app is loading to give better user experience, **QrCode** to display the generated Qrcode, **Stylesheet** to do the styling of the app.
+
+**Container components:** We have used unsubscribeAuth in our homepage to make sure that no one can login the system without taken and we have fetched data and check the username. In our app, the username is email. Then we have collected the stored data from firebase and push the value to JSON to display the members in presentational component. In Join page, we have taken the contact number and then pushed name, matric no and contact-number to the database. To send notification, we have retrieved the token from mobile and send data to firebase. 
+
+**Error Checking:** The error checking is essential for a app to determine how will it handle the errors. The App may crash if the error handling is not properly done. Errors occur when people engage with user interfaces. Sometimes, they happen because users make mistakes. The handle the errors, in SignUp screen when the user will write email and password which are not suitable to register to the app, it will show Alert and tell his to do it again. Once the user inputs email/password that are not registered to the App, it will show an Alert to write correct email/password. In update Password/Email page, it works also the same. 
+
+**Authentication:** Security feature is important to run an app so that user feel safe to use the app. For authentication, we have used firebase. Firebase provides some good authentication features such as email/password, Phone, Google, Play Games, Game center, Facebook, Twitter, Github, Yahoo, Microsoft, Apple and Anonymous. Among them we have used firebase Email/Password for the authentication. SignUp,Login and Updating email and password are handled by this authentication. When the user register with a certain email and password, it is stored to the firebase authentication and when use try to login with that certain username and password, it authenticates and navigate to the homescreen. Once the user press signout it unsubscribe the login token and lead him back to the login page. User can also update his/her email and password and it also works the same. Once the user change his email/password, in firebase authentication the username/Password is updated.
+
+**FireBase for data storage:** To store data, we have used firebase real-time database. We could use firebase cloud database which provides more space but in the database we need only to store the name, matricNo and Contact number and so we have used real-time database. All the information of the groupmembers are storing to the database and then retrieved from database and displays that who are in the group and who are not. Only when the user scans the correct Qrcode, he will be added to the firebase database and if he scans wrong Qrcode he will not be added. If the group is full and new member is added it will not display the new member. 
+
+**UI Tool Kit:** We have used ‘React-native-paper’ as UI tool kit to design our app. From ‘React-Native-Paper’ we have used TextInput, Button, DefaultTheme and provider. It provides some graphical effects in the app and makes the app more user friendly.
+
+### Screen Navigation
+![Navigation](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/navigation.png)
 
 ### Sequence Diagram
-![Sequence diagram 1](https://github.com/hzmnnrdn/StudentRegistry/blob/master/Sequence%20diagram%201.png)
-![Sequence diagram 2](https://github.com/hzmnnrdn/StudentRegistry/blob/master/Sequence%20diagram%202.png)
+![Sequence diagram 1](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/leader.png)
+![Sequence diagram 2](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/member.png)
+
+### ScreenShot
+![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/1.png)
+![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/2.png)
+![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/3.png)
+![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/4.png)
+![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/5.png)
+![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/6.png)
+![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/7.png)
+![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/8.png)
+![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/9.png)
 
 ### References
 - Student Registration and Enrollment Managemnet System. Retrieved from https://www.creatrixcampus.com/student-registration-enrollment
-- React-Native Geolocation API. Retrieved from https://reactnative.dev/docs/geolocation.html
-- React-Native Geolocation Github. Retrieved from https://github.com/react-native-community/react-native-geolocation
-- React-Native Camera Github. Retrieved from https://react-native-community.github.io/react-native-camera/docs/rncamera
-- React-Native Camera Tutorial. Retrieved from https://aboutreact.com/react-native-camera/
-- Speech API expo. Retrieved from https://docs.expo.io/versions/latest/sdk/speech/
-- LOcation API expo. Retrieved from https://docs.expo.io/versions/latest/sdk/location/
 - Firebase doucmentation.Retrieved from https://firebase.google.com/
+
 
