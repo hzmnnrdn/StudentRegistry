@@ -5,7 +5,7 @@
 ### Mujib Mehran 1632625
 ### Afifi Syahmi Bin Kamal-Ludin 1710129
 
-## Title: Find My Group
+## Title: Find My Group-mate
 
 ### Introduction
 Sometimes finding groupmates manually in the class is problematic.  ‘Find my Group-mate’ is an app which gives the best solution for that and it’s a very convenient way to join a group and detect which group has empty slot and which group does not. In this app, there will be two types of user. One is the Group leader and the another type is group members. Group Leaders can generate QR code to join group and once the generated QR-code is scanned by the groupmates, automatically he will added to certain group based on the QR code that he/she scanned. The group members have to signup to create an account using email and password. After completing the signup, the user can change his email and password. In Home page he can see the available slots of the groups and pressing the join button, user will navigate to Scanning the QR-code page and once he scan the QR-code he will be added. The users will also get the notifications about the projects.
