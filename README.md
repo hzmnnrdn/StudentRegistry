@@ -71,7 +71,15 @@ As our proposed mobile application is “Find My Group-partner”. We decided as
 ![Screenshot](https://github.com/hzmnnrdn/StudentRegistry/blob/master/images/9.png)
 
 ### References
-- Student Registration and Enrollment Managemnet System. Retrieved from https://www.creatrixcampus.com/student-registration-enrollment
 - Firebase doucmentation.Retrieved from https://firebase.google.com/
+- Design navigation https://online.visual-paradigm.com/app/diagrams/#diagram:proj=0&type=MobileWireflow
+- expo documentation from https://docs.expo.io/
+- react native documentation retrieved from https://reactnative.dev/
+- expo notification retrieved from https://docs.expo.io/versions/latest/sdk/notifications/
+- expo barcode scanner retrieved from https://docs.expo.io/versions/latest/sdk/bar-code-scanner/
+- react native qrcode generator retrieved from https://www.npmjs.com/package/react-native-qrcode-svg
+- expo contact API retrieved from https://docs.expo.io/versions/latest/sdk/contacts/
+- expo permission API retrieved from https://docs.expo.io/versions/latest/sdk/permissions/
+- expo notication API retrieved from https://expo.io/notifications
 
 
